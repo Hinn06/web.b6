@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Responsive Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+        .card {
+            background-color: #d11c4b;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .news-item {
+            flex-basis: 30%;
+            text-align: left;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .news-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .news-item p {
+            font-size: 14px;
+            color: black;
+        }
+
+        /* Hiệu ứng Hover */
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .news-item:hover img {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .news-item {
+                flex-basis: 48%; /* 2 cột trên tablet */
+            }
+        }
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .news-item {
+                width: 100%;
+            }
+        }
+
+        /* Nút Trở Lại */
+        .back-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+            color: #d11c4b;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #b0153a;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="name">Bão mạng</div>
+            <div class="content">
+                <div class="news-item">
+                    <img src="http://image.congan.com.vn/thumbnail/CATP-480-2022-10-4/bdc69ded-fde2-4336-aa47-de7195ca4baa_4032_3024_308.jpeg" alt="Tin tức 1">
+                    <p>Vụ mẹ và bé 3 tháng tuổi rơi từ tầng 12 chung cư tử vong: Cảnh sát nghi vấn do trầm cảm</p>
+                </div>
+                <div class="news-item">
+                    <img src="https://img.docnhanh.vn/thumb_x330x255/2022/10/03/canh-sat-giao-thong.jpg" alt="Tin tức 2">
+                    <p>MXH khen ngợi anh CSGT áo dính đầy máu khi đưa cô gái bị nạn đi cấp cứu</p>
+                </div>
+                <div class="news-item">
+                    <img src="https://thanhnien.mediacdn.vn/Uploaded/hinhdd/2022_09_24/222-1208.jpg" alt="Tin tức 3">
+                    <p>Lại xuất hiện clip khách chốt mua nhanh như chớp tại Bình Phước.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="index.html" class="back-button">Trở lại</a>
+</body>
+</html>

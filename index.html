@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu Bản Thân</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            background: #e1c7dd;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+        }
+        .nav-bar a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+        }
+        .nav-bar a:hover {
+            background: #e1c7dd;
+            color: #ba9db2;
+        }
+        .content {
+            padding: 80px 20px 20px;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 10px;
+            border: 5px solid white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .exercise-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .exercise-btn {
+            background: #D8A7CA;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            width: 200px;
+            transition: background 0.3s;
+        }
+        .exercise-btn:hover {
+            background: #C080B0;
+        }
+        .exercise-list {
+            display: none;
+            margin-top: 10px;
+        }
+        .exercise-list li a {
+            text-decoration: none;
+            color: black;
+            transition: color 0.3s;
+        }
+        .exercise-list li a:hover {
+            color: #4A90E2;
+        }
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+        @media screen and (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-bar a {
+                width: 100%;
+                padding: 12px;
+            }
+            .exercise-container {
+                width: 100%;
+            }
+            .exercise-btn {
+                width: 90%;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="nav-bar">
+        <a href="#home">Trang Chủ</a>
+        <a href="#about">Giới Thiệu</a>
+        <a href="#skills">Kỹ Năng</a>
+        <a href="#contact">Liên Hệ</a>
+        <a href="#exercises">Bài Tập</a>
+    </div>
+    <div class="content">
+        <div id="home" class="section">
+            <h2>Trang Chủ</h2>
+            <p>Chào mừng bạn đến với trang cá nhân của tôi! Tôi tên là Tô Thị Thu Hiền</p>
+            <img src="https://devo.vn/wp-content/uploads/2023/01/meo-buon-ba.jpg" alt="Ảnh cá nhân" class="profile-img">
+            <p><strong>Quê quán:</strong> Hà Nội</p>
+            <p><strong>Sở thích:</strong> Ăn, ngủ, shopping, đọc sách, du lịch,...</p>
+            <p><strong>Định hướng nghề nghiệp:</strong> Làm giảng viên IT, kinh doanh</p>
+        </div>
+        <div id="about" class="section">
+            <h2>Giới Thiệu</h2>
+            <p>Tôi là một sinh viên lớp CNTT D2024 đam mê công nghệ và lập trình, luôn tìm kiếm cơ hội để học hỏi và phát triển kỹ năng.</p>
+        </div>
+        <div id="skills" class="section">
+            <h2>Kỹ Năng</h2>
+            <p>Đang hoàn thiện kỹ năng lập trình</p>
+            <p>Kỹ năng giải quyết vấn đề</p>
+            <p>Làm việc nhóm </p>
+        </div>
+        <div id="contact" class="section">
+            <h2>Liên Hệ</h2>
+            <p><strong>Email:</strong> hienttt@example.com</p>
+            <p><strong>Số điện thoại:</strong> 0123-456-789</p>
+            <p><strong>Địa chỉ:</strong> Hà Nội, Việt Nam</p>
+        </div>
+        <div id="exercises" class="section">
+            <h2>Danh Sách Bài Tập</h2>
+            <div class="exercise-container">
+                <div class="exercise-btn" onclick="toggleExercises('buoi1')">Bài tập buổi 1</div>
+                <ul id="buoi1" class="exercise-list">
+                    <li><a href="bài 1.html">Bài 1</a></li>
+                    <li><a href="bài 2.html">Bài 2</a></li>
+                    <li><a href="bài 3.html">Bài 3</a></li>
+                    <li><a href="bài 4.html">Bài 4</a></li>
+                </ul>
+                <div class="exercise-btn" onclick="toggleExercises('buoi3')">Bài tập buổi 3</div>
+                <ul id="buoi3" class="exercise-list">
+                    <li><a href="lab2.html">Bài 1</a></li>
+                    <li><a href="bài 2 b2.html">Bài 2</a></li>
+                    <li><a href="bài 3 b2.html">Bài 3</a></li>
+                </ul>
+                <div class="exercise-btn" onclick="toggleExercises('buoi4')">Bài tập buổi 4</div>
+                <ul id="buoi4" class="exercise-list">
+                    <li><a href="bai11b4.html">Bài 1</a></li>
+                    <li><a href="bai12b4.html">Bài 1 </a></li>
+                    <li><a href="bai2b4.html">Bài 2 </a></li>
+                    <li><a href="bai31b4.html">Bài 3.1 </a></li>
+                    <li><a href="bai32b4.html">Bài 3.2 </a></li>
+                    <li><a href="bai33b4.html">Bài 3.3 </a></li>
+                </ul>
+                <div class="exercise-btn" onclick="toggleExercises('buoi5')">Bài tập buổi 5</div>
+                <ul id="buoi5" class="exercise-list">
+                    <li><a href="b1b5.html">Bài 1</a></li>
+                </ul>
+                <div class="exercise-btn" onclick="toggleExercises('buoi6')">Bài tập buổi 6</div>
+                <ul id="buoi6" class="exercise-list">
+                    <li><a href="float.html">Float</a></li>
+                    <li><a href="flexbox.html">Flex</a></li>
+                    <li><a href="grid.html">Grid</a></li>
+                    <li><a href="b1b6.html">Bài 1</a></li>
+                    <li><a href="b2b6.html">Bài 2</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleExercises(id) {
+            var list = document.getElementById(id);
+            if (list.style.display === 'none' || list.style.display === '') {
+                list.style.display = 'block';
+            } else {
+                list.style.display = 'none';
+            }
+        }
+    </script>
+    </body>
+    </html>
+    <button id="back-to-top" onclick="scrollToTop()">▲ Trở lại</button>
