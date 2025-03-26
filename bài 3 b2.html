@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 700px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #0277bd;
+            font-size: 28px;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #0277bd;
+            margin-top: 15px;
+            transition: transform 0.3s;
+        }
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #0288d1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #01579b;
+        }
+        video {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Giới thiệu bản thân</h1>
+        <img src="https://toigingiuvedep.vn/wp-content/uploads/2022/04/hinh-anh-meo-khoc-buon-cute.jpg" alt="Ảnh đại diện" class="profile-img">
+        <p>Xin chào! Tôi là Tô Thị Thu Hiền. Tôi là một sinh viên ngành công nghệ thông tin nhưng tôi không thích công nghệ, thiết kế web và lập trình.</p>
+        <a href="https://www.w3schools.com/" class="btn" target="_blank">Tìm hiểu thêm</a>
+        <h2>Video yêu thích</h2>
+        <video controls>
+            <source src="video yêu thích.mp4" type="video/mp4">
+        </video>
+        <a href="indexxx.html">Quay lại</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1 - Các Thẻ HTML Cơ Bản</title>
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Các Thẻ HTML Cơ Bản</h1>
+    <table>
+        <tr>
+            <th style="color:blue;">Thẻ</th>
+            <th style="color: blue;">Ý Nghĩa</th>
+            <th style="color:blue;">Ví Dụ</th>
+        </tr>
+        <tr>
+            <td><code>&lt;h1&gt; đến &lt;h6&gt;</code></td>
+            <td>Dùng để tạo tiêu đề với kích thước giảm dần từ h1 đến h6</td>
+            <td><code>&lt;h1&gt;Tiêu đề lớn&lt;/h1&gt;</code><h1 style="color: brown;">Tiêu đề lớn</h1></td>
+        </tr>
+        <tr>
+            <td><code>&lt;p&gt;</code></td>
+            <td>Định nghĩa một đoạn văn bản</td>
+            <td><code>&lt;p&gt;Đây là một đoạn văn&lt;/p&gt;</code><p>Cuộc sống không phải lúc nào cũng suôn sẻ, nhưng chính những khó khăn, thử thách lại giúp ta trưởng thành và mạnh mẽ hơn. Mỗi ngày là một cơ hội để học hỏi và làm mới bản thân. Đừng bao giờ từ bỏ, vì những điều tốt đẹp luôn đến với những ai kiên trì và không ngừng cố gắng.</p></td>
+        </tr>
+        <tr>
+            <td><code>&lt;a&gt;</code></td>
+            <td>Tạo liên kết đến một trang web</td>
+            <td><code>&lt;a href="https://www.w3schools.com"&gt;Truy cập W3Schools&lt;/a&gt;</code>	<a href="https://www.w3schools.com">Truy cập W3Schools</a></td>
+        </tr>
+        <tr>
+            <td><code>&lt;img&gt;</code></td>
+            <td>Chèn hình ảnh vào trang web</td>
+            <td><code>&lt;img src="hinh-anh-hoa-hong-đep.jpg" alt="Hoa hồng"&gt;</code><img src="hinh-anh-hoa-hong-đep.jpg" width="100"></td>
+        </tr>
+        <tr>
+            <td><code>&lt;ul&gt; &amp; &lt;li&gt;</code></td>
+            <td>Tạo danh sách không có thứ tự</td>
+            <td>
+                <code>
+                    &lt;ul&gt;  
+                    &lt;li&gt;Mục 1&lt;/li&gt;  
+                    &lt;li&gt;Mục 2&lt;/li&gt;  
+                    &lt;/ul&gt;
+                </code>
+                <ul> <li>Mục 1</li> <li>Mục 2</li> </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><code>&lt;table&gt;</code></td>
+            <td>Tạo bảng trong HTML</td>
+            <td>
+                <code>
+                    &lt;table&gt;  
+                    &lt;tr&gt;&lt;th&gt;Cột 1&lt;/th&gt;&lt;th&gt;Cột 2&lt;/th&gt;&lt;/tr&gt;  
+                    &lt;tr&gt;&lt;td&gt;Họ tên&lt;/td&gt;&lt;td&gt;Tuổi&lt;/td&gt;&lt;/tr&gt;  
+                    &lt;/table&gt;
+                </code>
+                <table> <tr><th>Cột 1</th><th>Cột 2</th></tr> <tr><td>Họ tên</td><td>Tuổi</td></tr> </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

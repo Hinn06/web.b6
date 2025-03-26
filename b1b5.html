@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu W3Schools</title>
+    <style>
+        /* Reset mặc định */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Menu ngang (top menu) giống W3Schools */
+        .menu-ngang {
+            background-color: #282A35;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 14px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .menu-ngang a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .menu-ngang a:hover {
+            background-color: #04AA6D;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Menu dọc (sidebar) */
+        .menu-doc {
+            width: 250px;
+            background-color: #f1f1f1;
+            height: 100vh;
+            position: fixed;
+            padding-top: 20px;
+            overflow-y: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+        .menu-doc a {
+            display: block;
+            color: black;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .menu-doc a:hover {
+            background-color: #ddd;
+        }
+
+        /* Nội dung chính với cuộn chuột */
+        .content-container {
+            margin-left: 270px;
+            padding: 100px 20px;
+            height: 100vh;
+            overflow-y: auto;
+            transition: margin-left 0.3s ease;
+            background-color: #ffffff;
+        }
+
+        /* Hiệu ứng menu dọc */
+        .menu-doc.hidden {
+            transform: translateX(-100%);
+        }
+
+        .toggle-menu {
+            display: none;
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            background-color: #04AA6D;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1100;
+        }
+        @media (max-width: 768px) {
+            .menu-doc {
+                transform: translateX(-100%);
+            }
+            .menu-doc.show {
+                transform: translateX(0);
+            }
+            .content-container {
+                margin-left: 0;
+            }
+            .toggle-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-menu">☰</button>
+    
+    <!-- Menu ngang -->
+    <div class="menu-ngang">
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JavaScript</a>
+        <a href="#">SQL</a>
+        <a href="#">Python</a>
+        <a href="#">PHP</a>
+        <a href="#">HOW TO</a>
+        <a href="#">W3.CSS</a>
+        <a href="#">C</a>
+        <a href="#">C++</a>
+        <a href="#">BOOTSTRAP</a>
+        <a href="#">REACT</a>
+    </div>
+
+    <!-- Menu dọc -->
+    <div class="menu-doc">
+        <a href="#">HTML HOME</a>
+        <a href="#">HTML Introduction</a>
+        <a href="#">HTML Editors</a>
+        <a href="#">HTML Basic</a>
+        <a href="#">HTML Elements</a>
+        <a href="#">HTML Attributes</a>
+        <a href="#">HTML Headings</a>
+        <a href="#">HTML Paragraphs</a>
+        <a href="#">HTML Styles</a>
+        <a href="#">HTML Formatting</a>
+        <a href="#">HTML Quotations</a>
+        <a href="#">HTML Comments</a>
+        <a href="#">HTML Colors</a>
+        <a href="#">HTML CSS</a>
+    </div>
+
+    <!-- Nội dung với hiệu ứng cuộn -->
+    <div class="content-container">
+        <h2>HTML Tutorial</h2>
+        <p>HTML là ngôn ngữ đánh dấu chuẩn cho trang web.</p>
+        <p>Với HTML, bạn có thể tạo trang web của riêng mình.</p>
+        <p>HTML dễ học - Bạn sẽ thích nó!</p>
+        <p>...</p>
+        <p style="height: 1000px;">Easy learning with HTML</p>
+        <a href="index.html" class="back-button"> Trở lại</a>
+    </div>
+
+    <script>
+        // Hiệu ứng cuộn cho menu ngang
+        window.addEventListener("scroll", function() {
+            let menu = document.querySelector(".menu-ngang");
+            if (window.scrollY > 50) {
+                menu.style.backgroundColor = "#1d1e22";
+            } else {
+                menu.style.backgroundColor = "#282A35";
+            }
+        });
+
+        // Hiệu ứng ẩn/hiện menu dọc trên mobile
+        document.querySelector(".toggle-menu").addEventListener("click", function() {
+            document.querySelector(".menu-doc").classList.toggle("show");
+        });
+    </script>
+</body>
+</html>
