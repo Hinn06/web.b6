@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Hot - Zing MP3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .album-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .album {
+            width: 200px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s, opacity 0.5s ease-in;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+        .album:hover {
+            transform: scale(1.1);
+        }
+        .album img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: opacity 0.3s;
+            border-radius: 10px;
+        }
+        .album:hover img {
+            opacity: 0.2;
+        }
+        .album-info {
+            padding: 10px;
+        }
+        .album-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .artist {
+            font-size: 14px;
+            color: #aaa;
+        }
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .album:hover .overlay {
+            opacity: 1;
+        }
+        .icon {
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.3); /* Màu nền trong suốt nhẹ */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s, background-color 0.3s;
+            border: 2px solid rgba(255, 255, 255, 0.8); /* Viền trắng trong suốt */
+         }
+
+         .album:hover .play-button {
+            opacity: 1;
+            background-color: rgba(255, 255, 255, 0.5); /* Khi hover, làm nền đậm hơn */
+         } 
+
+         .play-button::after {
+            content: '\25B6'; /* Unicode Play Icon */
+            font-size: 24px;
+            color: white;
+         }
+
+        .play-button::after {
+            content: '\25B6'; /* Unicode Play Icon */
+            font-size: 24px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Album Hot</h2>
+    <div class="album-container">
+        <div class="album">
+            <img src="https://cdn2.tuoitre.vn/471584752817336320/2024/12/6/307630bd2974932aca65-1733467184809249714048.jpg" alt="BTS">
+            <div class="overlay">
+                <span class="icon">❤</span>
+                <div class="play-button"></div>
+                <span class="icon">⋮</span>
+            </div>
+            <div class="album-info">
+                <div class="album-title">BTS</div>
+                <div class="artist">Fake Love, DNA, Boy With Luv, Dynamite, MIC Drop (Steve Aoki Remix), IDOL và Butter</div>
+            </div>
+        </div>
+        <div class="album">
+            <img src="https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2025/3/22/48575596512044957679186692749489873605565481n-1742643714888748885440.jpg" alt="Sự Nghiệp Chướng">
+            <div class="overlay">
+                <span class="icon">❤</span>
+                <div class="play-button"></div>
+                <span class="icon">⋮</span>
+            </div>
+            <div class="album-info">
+                <div class="album-title">Sự Nghiệp CHướng</div>
+                <div class="artist">Pháo</div>
+            </div>
+        </div>
+        <div class="album">
+            <img src="https://i.pinimg.com/736x/1e/7e/16/1e7e163ebed7a580fcf295a4704378d1.jpg" alt="Sơn Tùng MTP">
+            <div class="overlay">
+                <span class="icon">❤</span>
+                <div class="play-button"></div>
+                <span class="icon">⋮</span>
+            </div>
+            <div class="album-info">
+                <div class="album-title">Sơn Tùng MTP</div>
+                <div class="artist">Đừng Làm Trái Tim Anh Đau, Chúng Ta Của Hiện Tại,...</div>
+            </div>
+        </div>
+        <div class="album">
+            <img src="https://i.pinimg.com/736x/f4/b6/97/f4b697520d8621e7667bff4ed22ca0ae.jpg" alt="HIEUTHUHAI">
+            <div class="overlay">
+                <span class="icon">❤</span>
+                <div class="play-button"></div>
+                <span class="icon">⋮</span>
+            </div>
+            <div class="album-info">
+                <div class="album-title">HIEUTHUHAI</div>
+                <div class="artist">Exit Sign,Không Thể Say,</div>
+            </div>
+        </div>
+        <div class="album">
+            <img src="https://i.pinimg.com/736x/68/90/3d/68903dba8471d94c3b29e3821188cd63.jpg" alt="Kpop On">
+            <div class="overlay">
+                <span class="icon">❤</span>
+                <div class="play-button"></div>
+                <span class="icon">⋮</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

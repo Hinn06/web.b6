@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles b3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggleBars = document.querySelector(".toggle-bars");
+        const header = document.querySelector(".site-header");
+
+        toggleBars.addEventListener("click", function () {
+            header.classList.toggle("menu-open");
+        });
+    });
+</script>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#" class="toggle-bars" aria-label="Toggle navigation" role="button">
+                <span class="toggle-bars__bar-line toggle-bars__bar-line--top"></span>
+                <span class="toggle-bars__bar-line toggle-bars__bar-line--middle"></span>
+                <span class="toggle-bars__bar-line toggle-bars__bar-line--bottom"></span>
+            </a>
+            <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/06/Kalium-Theme-Icon.png" class="main-logo" width="50" height="50" alt="Kalium">
+        </div>
+        <div class="menu-overlay">
+            <nav class="menu">
+                <a href="#">Home</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Team</a>
+                <a href="#">Services</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+                <a href="#">Buy Now!</a>
+                <a href="#">Search</a>
+            </nav>
+        </div>
+    </header>
+    <h1>Clear thinking at the wrong moment can stifle
+        <span class="creative-text">creative
+            <span class="typed-cursor">_</span>
+        </span>
+    </h1>
+    <nav class="horizontal-menu">
+        <a href="#" class="active">All</a>
+        <a href="#">Branding</a>
+        <a href="#">Digital Art</a>
+        <a href="#">Photography</a>
+        <a href="#">Print</a>
+    </nav>
+    <div class="grid-container">
+        <div class="grid-item large1">
+            <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/05/adestra-c-558x372.jpg" alt="Image 1">
+            <div class="overlay">
+                <span class="heart">❤️</span>
+                <h2>ADESTRA</h2>
+                <p>Branding, Print</p>
+            </div>
+        </div>
+        <div class="grid-item large2">
+            <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/04/desk-concept-c-468x468.jpg" alt="Image 2">
+            <div class="overlay">
+                <span class="heart">❤️</span>
+                <h2>DESK CONCEPT</h2>
+                <p>Photography>
+            </div>
+        </div>
+        <div class="grid-item large3">
+            <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/04/multi-color-c-558x369.jpg" alt="Image 3">
+            <div class="overlay">
+                <span class="heart">❤️</span>
+                <h2>MULTI COLOR</h2>
+                <p>Digital Art</p>
+            </div>
+        </div>
+        <div class="grid-item large4">
+            <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2015/03/cloud-inc-c-558x372.jpg" alt="Image 4">
+            <div class="overlay">
+                <span class="heart">❤️</span>
+                <h2>CLOUD INC</h2>
+                <p>Print</p>
+            </div>
+        </div>
+        <div class="grid-item large5">
+            <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/04/capricho-c-558x338.jpg" alt="Image 5">
+            <div class="overlay">
+                <span class="heart">❤️</span>
+                <h2>CAPRICHO</h2>
+                <p>Digital Art</p>
+            </div>
+        </div>
+        <div class="grid-item large6">
+            <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/04/ethics-for-design-c-558x372.jpg" alt="Image 6">
+            <div class="overlay">
+                <span class="heart">❤️</span>
+                <h2>ETHICS FOR DESIGN</h2>
+                <p>Print</p>
+            </div>
+        </div>
+        <a href="index.html" class="back-button">Back to Home</a>
+</body>
+</html>

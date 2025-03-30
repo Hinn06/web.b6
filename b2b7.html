@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalium Fashion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', sans-serif; }
+        body { background-color: #ffffff; color: #333; }
+        
+        /* Navigation Menu */
+        .menu { display: flex; justify-content: space-between; align-items: center; padding: 20px 80px; background: white; border-bottom: 1px solid #ddd; }
+        .menu .logo { font-size: 28px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
+        .menu ul { list-style: none; display: flex; gap: 40px; }
+        .menu ul li { display: inline-block; }
+        .menu ul li a { text-decoration: none; color: black; font-size: 16px; font-weight: 600; text-transform: uppercase; padding: 5px 0; position: relative; }
+        .menu ul li a:hover::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 100%; height: 2px; background: black; }
+        
+        /* New Arrivals Section */
+        .new-arrivals { padding: 100px 10%; text-align: center; }
+        .new-arrivals h2 { font-size: 36px; font-weight: 700; margin-bottom: 50px; letter-spacing: 1px; }
+        .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; justify-content: center; }
+        .product { text-align: center; position: relative; overflow: hidden; }
+        .product img { width: 100%; transition: transform 0.3s ease; }
+        .product:hover img { transform: scale(1.1); }
+        .product .title { margin-top: 10px; font-size: 18px; font-weight: bold; }
+        .product .price { color: #777; font-size: 16px; margin-top: 5px; }
+        .product .button { display: block; margin-top: 10px; padding: 10px; background: black; color: white; text-transform: uppercase; font-size: 14px; text-decoration: none; border-radius: 5px; transition: background 0.3s; }
+        .product .button:hover { background: #444; }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .menu { padding: 20px 40px; }
+            .products { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 768px) {
+            .menu { flex-direction: column; align-items: center; text-align: center; }
+            .menu ul { flex-direction: column; gap: 20px; }
+            .products { grid-template-columns: repeat(1, 1fr); }
+        }
+        
+        /* Back Button */
+        .back-button { display: block; width: 200px; margin: 40px auto 0; padding: 15px; text-align: center; background: black; color: white; text-transform: uppercase; font-weight: bold; text-decoration: none; border-radius: 5px; transition: background 0.3s ease; }
+        .back-button:hover { background: #444; }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <div class="logo">Kalium</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section class="new-arrivals">
+        <h2>New Arrivals</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://demo.kaliumtheme.com/fashion/wp-content/uploads/2016/11/lace_dress_1-655x812.jpg" alt="Lace Dress">
+                <div class="title">Lace Dress</div>
+                <div class="price">$120</div>
+                <a href="#" class="button">Shop Now</a>
+            </div>
+            <div class="product">
+                <img src="https://demo.kaliumtheme.com/fashion/wp-content/uploads/2016/11/broken_2.jpg" alt="Broken T Shirt">
+                <div class="title">Broken T Shirt</div>
+                <div class="price">$9</div>
+                <a href="#" class="button">Shop Now</a>
+            </div>
+            <div class="product">
+                <img src="https://demo.kaliumtheme.com/fashion/wp-content/uploads/2016/11/silversneakers_6.jpg" alt="Stylish Shoes">
+                <div class="title">Stylish Shoes</div>
+                <div class="price">$75</div>
+                <a href="#" class="button">Shop Now</a>
+            </div>
+            <div class="product">
+                <img src="https://demo.kaliumtheme.com/fashion/wp-content/uploads/2016/11/studio_belt_4.jpg" alt="Studio Belt">
+                <div class="title">Studio Belt</div>
+                <div class="price">$7</div>
+                <a href="#" class="button">Shop Now</a>
+            </div>
+        </div>
+        <a href="index.html" class="back-button">Back to Home</a>
+    </section>
+</body>
+</html>
