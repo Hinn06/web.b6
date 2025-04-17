@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Đăng Ký</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        .form-box {
+            width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 1px solid black;
+        }
+        h2 {
+            text-align: center;
+            color: purple;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        input[type="text"], select, textarea {
+            width: calc(100% - 12px);
+            padding: 5px;
+        }
+        input[type="submit"],
+        input[type="reset"],
+        button {
+            margin-right: 10px;
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-box">
+    <h2>FORM ĐĂNG KÝ</h2>
+    <form name="regForm" onsubmit="return validateForm()">
+        Họ: <input type="text" name="ho"><br><br>
+        Tên: <input type="text" name="ten"><br><br>
+
+        Ngày sinh:
+        Ngày <select name="ngay" id="ngay"></select>
+        Tháng <select name="thang" id="thang"></select>
+        Năm <select name="nam" id="nam"></select><br><br>
+
+        Giới tính:
+        <input type="radio" name="gender" value="Nam" checked>Nam
+        <input type="radio" name="gender" value="Nữ">Nữ<br><br>
+
+        Số điện thoại: <input type="text" name="sdt"><br><br>
+
+        Sở thích:
+        <input type="checkbox" name="sothich" value="Đọc sách">Đọc sách
+        <input type="checkbox" name="sothich" value="Xem phim">Xem phim
+        <input type="checkbox" name="sothich" value="Nghe nhạc">Nghe nhạc
+        <input type="checkbox" name="sothich" value="Đá bóng">Đá bóng<br><br>
+
+        Khác:<br>
+        <textarea name="khac" rows="3" cols="40"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <button type="button" onclick="goBack()">Trở lại</button>
+    </form>
+</div>
+
+<script src="js b4b9.js"></script>
+</body>
+</html>

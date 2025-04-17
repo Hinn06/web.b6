@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Slideshow</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+        .slideshow-container {
+            position: relative;
+            width: 600px;
+            margin: 30px auto;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+        .back {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Slideshow hình ảnh</h2>
+<div class="slideshow-container">
+    <button class="btn prev" onclick="nextImage()">&#10094;</button>
+    <img id="slide" src="image1.jpg" alt="Slideshow">
+    <button class="btn next" onclick="prevImage()">&#10095;</button>
+</div>
+
+<button class="back" onclick="goBack()">Trở lại</button>
+
+<script src="js b5b9.js"></script>
+</body>
+</html>

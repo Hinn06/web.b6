@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hiện phép tính</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+        input {
+            width: 40px;
+            text-align: center;
+        }
+        .row {
+            margin-bottom: 10px;
+        }
+        #history span {
+            margin-right: 20px;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h4>6.2 Thực hiện phép tính và đổi màu phép tính vừa thực hiện</h4>
+
+<h3>các phép toán</h3>
+
+<div class="row">
+    phép cộng
+    <input type="number" id="a1"> +
+    <input type="number" id="b1"> =
+    <input type="text" id="kq1" readonly>
+    <button onclick="cong()">=</button>
+</div>
+
+<div class="row">
+    phép trừ
+    <input type="number" id="a2"> -
+    <input type="number" id="b2"> =
+    <input type="text" id="kq2" readonly>
+    <button onclick="tru()">=</button>
+</div>
+
+<div class="row">
+    phép nhân
+    <input type="number" id="a3"> *
+    <input type="number" id="b3"> =
+    <input type="text" id="kq3" readonly>
+    <button onclick="nhan()">=</button>
+</div>
+
+<div class="row">
+    phép chia
+    <input type="number" id="a4"> /
+    <input type="number" id="b4"> =
+    <input type="text" id="kq4" readonly>
+    <button onclick="chia()">=</button>
+</div>
+
+<h3>Các phép toán vừa thực hiện</h3>
+<div id="history"></div>
+
+<button onclick="troLai()">Trở lại</button>
+
+<script src="js b62.js"></script>
+</body>
+</html>
