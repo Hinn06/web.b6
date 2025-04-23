@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>HUSTER</h2>
+    <p>IT1 HUSTER</p>
+    <p class="intro">Hello World!</p>
+    <p class="intro">
+      qua môn web đi mà <b>getElementsByClassName</b> method.
+    </p>
+
+    <p id="demo"></p>
+    <a href="index.html">back</a>
+    <script>
+      const x = document.getElementsByClassName("intro");
+      document.getElementById("demo").innerHTML =
+        'The first paragraph (index 0) with class="intro" is: ' +
+        x[0].innerHTML;
+    </script>
+  </body>
+</html>

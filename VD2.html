@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Ví dụ: Tìm phần tử HTML theo class name</h2>
+<p>Xin chào bạn!</p>
+
+<p class="thongbao">Thông báo: Bạn đã đăng nhập thành công.</p>
+<p class="thongbao">Thông báo: Vui lòng kiểm tra email để xác nhận.</p>
+
+<p id="ketqua"></p>
+
+<script>
+  var x = document.getElementsByClassName("thongbao");
+  document.getElementById("ketqua").innerHTML =
+    'Thông báo đầu tiên là: ' + x[0].innerHTML;
+</script>
+
+</body>
+</html>
+<button onclick="window.location.href='index.html'">Quay lại</button>

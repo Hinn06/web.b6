@@ -21,6 +21,7 @@
             top: 0;
             width: 100%;
             z-index: 999;
+            transition: all 0.3s;
         }
         .nav-bar a {
             color: white;
@@ -33,6 +34,28 @@
         .nav-bar a:hover {
             background: #e1c7dd;
             color: #ba9db2;
+        }
+        .sidebar {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background: #D8A7CA;
+            padding: 10px;
+            border-radius: 0 10px 10px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 999;
+        }
+        .sidebar a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .sidebar a:hover {
+            transform: scale(1.2);
         }
         .content {
             padding: 80px 20px 20px;
@@ -65,14 +88,20 @@
             text-align: center;
             cursor: pointer;
             width: 200px;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.3s;
+            position: relative;
         }
         .exercise-btn:hover {
             background: #C080B0;
+            transform: translateY(-2px);
+        }
+        .exercise-btn:hover + .exercise-list {
+            display: block !important;
         }
         .exercise-list {
             display: none;
             margin-top: 10px;
+            transition: all 0.3s ease-in-out;
         }
         .exercise-list li a {
             text-decoration: none;
@@ -111,16 +140,34 @@
                 font-size: 14px;
             }
         }
+        @media screen and (max-width: 480px) {
+            .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+            .nav-bar a {
+                font-size: 14px;
+            }
+            .exercise-btn {
+                font-size: 13px;
+            }
+        }
     </style>
 </head>
 <body>
-    
     <div class="nav-bar">
         <a href="#home">Trang Chủ</a>
         <a href="#about">Giới Thiệu</a>
         <a href="#skills">Kỹ Năng</a>
         <a href="#contact">Liên Hệ</a>
         <a href="#exercises">Bài Tập</a>
+    </div>
+    <div class="sidebar">
+        <a href="#home">🏠</a>
+        <a href="#about">👤</a>
+        <a href="#skills">💻</a>
+        <a href="#contact">📞</a>
+        <a href="#exercises">📚</a>
     </div>
     <div class="content">
         <div id="home" class="section">
@@ -205,20 +252,53 @@
                     <li><a href="b6.1b9.html">Bài 6.1</a></li>
                     <li><a href="b6.2b9.html">Bài 6.2</a></li>
                 </ul>
+                <div class="exercise-btn" onclick="toggleExercises('buoi10')">Bài tập buổi 10</div>
+                <ul id="buoi10" class="exercise-list">
+                    <li><a href="VD1.html"> Bài 1 vd1</a></li>
+                    <li><a href="VD2.html"> Bài 1 vd2</a></li>
+                    <li><a href="VD3.html"> Bài 1 vd3</a></li>
+                    <li><a href="VD4.html"> Bài 1 vd4</a></li>
+                    <li><a href="VD5.html"> Bài 1 vd5</a></li>
+                    <li><a href="VD6.html"> Bài 1 vd6</a></li>
+                    <li><a href="VD6.11.html"> Bài 1 vd6.1</a></li>
+                    <li><a href="VD7.html"> Bài 1 vd7</a></li>
+                    <li><a href="VD8.html"> Bài 1 vd8</a></li>
+                    <li><a href="VD10.html"> Bài 1 vd10</a></li>
+                    <li><a href="VD11.html"> Bài 1 vd11</a></li>
+                    <li><a href="VD12.html"> Bài 1 vd12</a></li>
+                    <li><a href="VD13.html"> Bài 1 vd13</a></li>
+                    <li><a href="VD14.html"> Bài 1 vd14</a></li>
+                    <li><a href="b2b10.html">Bài 2</a></li>
+                    <li><a href="Hiền.html">Bài 3</a></li>
+                </ul>
             </div>
         </div>
             </div>
     </div>
+    <button id="back-to-top" onclick="scrollToTop()">▲ Trở lại</button>
     <script>
         function toggleExercises(id) {
             var list = document.getElementById(id);
-            if (list.style.display === 'none' || list.style.display === '') {
-                list.style.display = 'block';
+            list.style.display = list.style.display === 'block' ? 'none' : 'block';
+        }
+
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".nav-bar");
+            const btn = document.getElementById("back-to-top");
+            if (window.scrollY > 100) {
+                navbar.style.backgroundColor = "#ba9db2";
+                navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.2)";
+                btn.style.display = "block";
             } else {
-                list.style.display = 'none';
+                navbar.style.backgroundColor = "#e1c7dd";
+                navbar.style.boxShadow = "none";
+                btn.style.display = "none";
             }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
-    </body>
-    </html>
-    <button id="back-to-top" onclick="scrollToTop()">▲ Trở lại</button>
+</body>
+</html>
